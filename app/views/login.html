@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <h1>Welcome to Bladder Mate</h1>
+  <p class="lead">
+    <img src="images/placeholder.jpg" alt="Bladder Mate logo" width="50%" height="50%"><br>
+  </p>
+  <form>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <input type="text" class="form-control" name="userName" ng-model="user.name" required placeholder="Username"><br/><br/>
+          <p class="btn-toolbar">
+            <a class="btn btn-lg btn-success" ng-href="#/" ng-click="setUser(user.name)">Log in</a>
+            <a class="btn btn-lg btn-primary" ng-href="#/" ng-click="makeUser(user.name)">Sign up</a>
+          </p>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+  </form>
+</div>

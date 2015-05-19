@@ -9,9 +9,10 @@
  */
 var restService = angular.module('rest',['ngResource']);
 
-restService.factory('Mate', ['$resource',
-  function ($resource) {
-    return $resource('http://localhost:8080/root/rest/mateService/mate/:mateID',{}, {
-      get: {method:'GET', params: {mateID:'0'}}
-    });
-  }]);
+restService.factory('Mate', function ($resource) {
+  return $resource('http://jbossews-bladdermate.rhcloud.com/rest/mateService/mate',{}, {
+    create: {method:'POST'},
+    get:{method: 'GET', url: 'http://jbossews-bladdermate.rhcloud.com/rest/mateService/mate/:mateID'}
+  });
+});
+
